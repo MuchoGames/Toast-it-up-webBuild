@@ -1,98 +1,69 @@
+<!-- Play on Poki -->
+<!-- NOTE:
+	this HTML will not be used on Poki.com, the HTML will be auto generated from the index.json.
+	If you wish to add custom HTML you can add this in the "extra_html" part of the JSON.
+-->
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Toast it Up</title>
-  </head>
-  <!-- poki include body -->
-  <body style="text-align: center; padding: 0; border: 0; margin: 0; background-color: black;">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <div class="container" style="height: 100vh; width: 100wh; position: relative; /*border: 3px solid green*/; text-align:center;">
+	<title>Toast it Up - Play on Poki</title>
 
-      <canvas id="unity-canvas" width=512 height=912 
-      style="
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-      ">       
-      </canvas>
+	<script>
+	var buildUrl = 'Build';
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 16 / 9,
+		minRatio: 9 / 16,
 
-    </div>
+		title: 'Toast it Up',
 
-    <script src="Build/toast_it_up_webgl_04.loader.js"></script>
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
-      {
-        console.log("mobile mode active");
+		thumbnail: 'https://img.poki.com/cdn-cgi/image/quality=80,width=100,height=100,fit=cover,g=0.5x0.5,f=auto/a398cd4e645b76810031bd97f8697414.png',
+		numScreenshots: 4,
 
-        const portrait = window.matchMedia("(orientation: portrait)").matches;
-        
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        
-        document.getElementsByTagName('head')[0].appendChild(meta);
-
-        var canvas = document.querySelector("#unity-canvas");
-        var gameAspect = canvas.width / canvas.height;
-
-        if (portrait) //if portrait, check if the pportrait aspect ratio is wider than the game
-        {
-          var deviceAspect = getDeviceAspectRatio();
-          var aspectDelta = deviceAspect - gameAspect;
-          console.log("activating portrait mode at aspectRatio: " + deviceAspect);
-          if (Math.abs(aspectDelta) > 0.05) //check if there is a substancial amount of difference in aspect ratios
-          {
-            if (aspectDelta < 0) // the devices is narrower than the game 
-            {
-              //fill the screen, the game supports narrower devices but not wider devices.
-              canvas.style.width = "100%";
-              canvas.style.height = "100%";
-            }
-            else // the device is wider (IPad for example)
-            {
-              canvas.style.height = "100%";
-            }
-          }
-          else //if not fill the screen
-          {
-            canvas.style.height = "100%";
-            canvas.style.width = "100%";
-          }
-        }
-        else //if land, match height
-        {
-          console.log("activating land mode");
-          canvas.style.height = "100%";
-        }
-
-        document.body.style.textAlign = "left";
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/toast_it_up_webgl_04.data.unityweb",
-        frameworkUrl: "Build/toast_it_up_webgl_04.framework.js.unityweb",
-        codeUrl: "Build/toast_it_up_webgl_04.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Mucho Games",
-        productName: "Toast it Up",
-        productVersion: "101",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-
-      function getDeviceAspectRatio() 
-      {
-        var screenWidth = window.screen.width;
-        var screenHeight = window.screen.height;
-        var aspectRatio = screenWidth / screenHeight;
-        return aspectRatio;
-      }
-    </script>
-
-  </body>
-  <!-- poki include end -->
+		metadata:{
+			"poki_template_version": 1,
+			"extra_html": {
+				"head": [
+					"<!-- will be copied to the resulting head //-->"
+				],
+				"body": [
+					"<!-- will be copied to the resulting body //-->",
+					"<!-- will also be copied to the resulting body //-->"
+				]
+			},
+			"background_color": "#000000",
+			"background_filename": "",
+			"code_filename": "toast_it_up_webgl_06.wasm.unityweb",
+			"company_name": "Mucho Games",
+			"data_filename": "toast_it_up_webgl_06.data.unityweb",
+			"decompression_fallback": "Brotli",
+			"development_player": "false",
+			"framework_filename": "toast_it_up_webgl_06.framework.js.unityweb",
+			"height": "912",
+			"loader_filename": "toast_it_up_webgl_06.loader.js",
+			"memory_filename": "",
+			"product_name": "Toast it Up",
+			"product_version": "101",
+			"splash_screen_style": "Dark",
+			"symbols_filename": "",
+			"unity_version": "2021.3.15f1",
+			"use_data_caching": "true",
+			"use_threads": "false",
+			"use_wasm": "true",
+			"use_webgl_1_0": "true",
+			"use_webgl_2_0": "true",
+			"width": "512"
+		}
+	};
+	</script>
+</head>
+<body>
+	<script src="https://game-cdn.poki.com/loaders/v3/master-loader.js"></script>
+	<div style="position:absolute;top:0px;left:0px;z-index:9999;margin:10px">
+		This HTML will not be used on Poki.com. A new HTML will be auto generated from the JSON.
+	</div>
+</body>
 </html>

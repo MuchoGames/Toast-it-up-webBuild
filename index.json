@@ -1,0 +1,34 @@
+{
+	"poki_template_version": 1,
+	"extra_html": {
+	  "head": [
+		"<!-- will be copied to the resulting head //-->"
+	  ],
+	  "body": [
+		"<!-- will be copied to the resulting body //-->",
+		"<!-- will also be copied to the resulting body //-->"
+	  ]
+	},
+	"background_color": "#000000",
+	"background_filename": "",
+	"code_filename": "toast_it_up_webgl_06.wasm.unityweb",
+	"company_name": "Mucho Games",
+	"data_filename": "toast_it_up_webgl_06.data.unityweb",
+	"decompression_fallback": "Brotli",
+	"development_player": "false",
+	"framework_filename": "toast_it_up_webgl_06.framework.js.unityweb",
+	"height": "912",
+	"loader_filename": "toast_it_up_webgl_06.loader.js",
+	"memory_filename": "",
+	"product_name": "Toast it Up",
+	"product_version": "101",
+	"splash_screen_style": "Dark",
+	"symbols_filename": "",
+	"unity_version": "2021.3.15f1",
+	"use_data_caching": "true",
+	"use_threads": "false",
+	"use_wasm": "true",
+	"use_webgl_1_0": "true",
+	"use_webgl_2_0": "true",
+	"width": "512"
+  }
